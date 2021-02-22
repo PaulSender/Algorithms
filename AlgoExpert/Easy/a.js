@@ -57,3 +57,21 @@
 // For example:
 
 // Alice,John
+
+
+
+const solution = (prices) => {
+    var min = Number.MAX_VALUE
+    var maxValue = 0
+    for(var num of prices) {
+        if(num < min) {
+            min = num
+        }
+        if((num - min) > maxValue) {
+            maxValue = (num - min)
+        }
+    }
+    return maxValue
+};
+
+console.log(solution([6, 0, -1, 10]))
